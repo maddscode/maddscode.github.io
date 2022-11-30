@@ -107,14 +107,26 @@
 	}
 
 	#pluto {
-		width:50px;
-		height:50px;
+		width:100px;
+		height:100px;
 		background-image: url(https://upload.wikimedia.org/wikipedia/commons/9/94/Pluto-transparent.png);
 		background-repeat: no-repeat;
 		background-size: contain;
 		position: absolute;
 		top:150px;
 		left: 83%;
+
+	}
+
+	#rocket {
+		width:50px;
+		height:50px;
+		background-image: url(https://upload.wikimedia.org/wikipedia/commons/3/33/Cartoon_space_rocket.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		position: absolute;
+		z-index: ;
+	}
 
 
 
@@ -132,7 +144,7 @@
 	<div id=background></div>
 	
 
-<a href = "IMG_3367.jpeg">
+<a href = "IMG_1213.jpeg">
 
 	<div id=earth></div>
 
@@ -161,6 +173,18 @@
 
 	<div id="pluto"></div>
 
+	<div id="rocket"></div>
+
+		<script type="text/javascript">
+
+		document.addEventListener(
+			"mousemove", function(event){
+			rocket.style.top = event.clientY + "px";
+			rocket.style.left = event.clientX + "px";
+		})
+
+		</script>
+	
 
 
 
