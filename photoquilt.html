@@ -13,20 +13,34 @@
         p{
             font-family: courier;
             font-size:50px;
-            color: darkmagenta;
+            color: slategray;
         }
 
-    #albums
 
     </style>
+
 </head>
 <body>
 
 <center>
-<p> <!-- If you'd like a description, feel free to put in your description here! Add your styling above in the curly brackets after "p" above --> albums <p>
+<p> <!-- If you'd like a description, feel free to put in your description here! Add your styling above in the curly brackets after "p" above --> songs <p>
 </center>
+
+<!-- <a href="friends.html">
+        <div id="square1"></div>
     
-    <div id="albums"></div>
+    </a>
+
+<a href="beach.html">
+        <div id="square2"></div>
+    
+    </a>
+
+
+<a href="christmas.html">
+        <div id="square 3"></div>
+    
+    </a> -->
 
 
 <script type="text/javascript">
@@ -38,23 +52,32 @@
     function makeSquare (x) {
 
             var square = document.createElement('div');
-                        document.body.appendChild(square);
+
+            var link =document.createElement('a');
+                    document.body.appendChild(link);
+                    link.appendChild(square);
+
+                    link.href= x+ ".html";
+
+
             square.style.width = "217px";
             square.style.height = "217px";
             square.style.display = "inline-block";
             square.style.margin = "10px";
             square.style.backgroundRepeat = "no-repeat";
             square.style.border = "1px";
-            square.style.backgroundColor = "orchid";
+            
+            square.style.backgroundImage = "url(./photoquilt/" + x + ".jpeg)";
+            square.style.backgroundPositionY = "center"
+            square.style.backgroundPositionX = "center"
 
-            square.style.backgroundImage = "url(" + x + ".jpg)";
 
             square.style.backgroundSize = "contain";
             square.style.id = "square" + x;};
 
 //Below, is the for loop in which where the squares are actually made. This for loop is where the function above is actually called. It is called 14 times, (between the values of 0 and 15) and because the variable i is declared in the for loop and is then being passed to the makeSquare recipe, each time the function runs, i changes in value (+1). Thus, the attributes that involve the i change in value as well (eg. the id attribute changes to be whatever i was last time, plus 1.)//
 
-    for (var i = 0; i < 15; i++) 
+    for (var i = 0; i < 10; i++) 
     { makeSquare(i);}
 </script>
 </body>
