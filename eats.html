@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<style type="text/css">
+
+		.food{
+			height: 152px;
+			width: 152px;
+			background-image: url(./eats/lid.png);
+			display: inline-block;
+			margin: 3px;
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+
+
+	</style>
+
+
+</head>
+<body>
+
+<!-- <div class="food">
+	</div> -->
+
+	<script type="text/javascript">
+
+function makefood (something){
+	var dish = document.createElement("div");
+	document.body.appendChild(dish);
+	dish.classList.add("food");
+
+
+	dish.addEventListener("click", function(){
+		dish.style.backgroundImage = "url(./eats/" + something + "-removebg-preview" +".png)"
+	})
+}
+
+
+
+
+
+
+for(var i=1; i<40; i=i+1){
+	makefood(i)
+}
+
+
+	</script>
+
+
+
+	
+
+</body>
+</html>

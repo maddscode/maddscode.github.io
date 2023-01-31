@@ -38,6 +38,17 @@
 
 		}
 
+		#aboutme:hover{
+			background-color: powderblue;
+			transition: 0.1s;
+			color: darkcyan;
+		}
+
+
+		
+
+
+
 		#projects{
 			top: 250px;
 			left: 600px;
@@ -45,10 +56,34 @@
 
 		}
 
+		#projects:hover{
+			background-color: pink;
+			transition: 0.1s;
+			color: rgb(176, 106, 117); 
+
+		}
+
 		#journal{
 			top: 600px;
 			left: 1000px;
 			border: 3px solid plum;
+
+		}
+
+		#journal:hover{
+			background-color: plum;
+			transition: 0.1s;
+			color: darkmagenta;
+
+		}
+
+		#journalplant{
+			height: 100px;
+			width: 100px;
+			background-image: purplepot.png;
+			position: absolute;
+			left: 1000px;
+			top: 550px;
 
 		}
 
@@ -65,17 +100,21 @@
 <a href="aboutme.html">
 	<div class="button" id="aboutme"> about me</div>
 </a>
+<div id="aboutmeplant"></div>
 
 <a href="journal.html">
 	<div class="button" id="journal"> journal</div>
 </a>
 
+<div id="journalplant"></div>
 
 <a href="projects.html">
 	<div class="button" id="projects">projects</div>
 
 
 	</a>
+
+	<div id="projectsplant"></div>
 	
 </div>
 
