@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+    <style>
+        
+
+        #buggy{
+            width:75px;
+            height:75px;           
+            background-image: url(car.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: relative;
+            top: 56%;
+            left: 15%;
+            z-index: 2;
+            transition: .5s;
+        }
+
+        #bridge{
+            width: 600px;
+            height: 600px;
+            background-image: url(bridge.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 5%;
+            left: 30%;
+            z-index: 1;
+
+        }
+
+        #bridgecopy{
+            width: 600px;
+            height: 600px;
+            background-image: url(bridgecopy.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 5%;
+            left: 30%;
+            z-index: 4;
+
+
+        }
+    </style>
+</head>
+<body>
+
+    <div id="bridge">
+            <div id="buggy"></div>
+
+    </div>
+    <div id="bridgecopy"></div>
+
+    <script type="text/javascript">
+        buggy.style.left = "0px";
+
+         var x = parseInt(buggy.style.left);
+
+        document.addEventListener("keydown", function(event){
+            // console.log(event.keyCode)
+
+            if(event.keyCode == 39){
+                x=x+20
+                buggy.style.left = x + "px";
+                buggy.style.backgroundImage = "url(car.png)";
+                console.log(x)
+
+                if (x>=200  ){
+                alert("turn!")
+            }
+
+
+            else if (event.keyCode == 37){
+                x=x-20
+                buggy.style.left = x + "px";
+                buggy.style.backgroundImage = "url(car2.png)"
+
+
+
+            }
+
+            
+             //    x=x-1;
+             // buggy.style.left = x + "px";
+
+                // buggy.style.backroundImage "url()"
+
+            }
+
+        })
+
+
+    </script>
+
+</body>
+</html>
