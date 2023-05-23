@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <style type="text/css">
+#title{
+    font-size: 30px;
+    font-family: 'Archivo Black';
+    color: cadetblue;
+    position: relative;
+
+}       
+#case{
+    width: 290px;
+    height: 577px;
+    background-image: url(case.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 0px;
+    left: 200px;
+ 
+}
+
+.deco{
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#flower{
+    background-image: url(flower.png);
+    position: relative;
+    top: -50px;
+    left: 50px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#blob{
+        background-image: url(blob.png);
+        position: relative;
+      
+
+}
+
+#smiley{
+    background-image: url(smiley.png);
+    position: relative;
+    top: -100px;
+    left: 100px;
+}
+
+
+
+
+
+    body{background-color: white;}
+    </style>
+
+</head>
+<body>
+<center><p id="title"> maddy's casaria</p></center>
+<div id="case"></div>
+<div id="blob"class="deco"></div>
+<div id="flower"class="deco"></div>
+<div id="smiley"class="deco"></div>
+
+<div id="roy"></div>
+
+<script type="text/javascript">
+    var image;
+    var deco;
+    
+    function makeDeco() { 
+        deco = document.createElement("div");
+        deco.style.width = "50px";
+        deco.style.height = "50px";
+        deco.style.borderRadius = "50%";
+        deco.style.position = "absolute";
+        // deco.style.background-repeat = "no-repeat";
+        deco.style.backgroundImage = "url("+image+" )";
+        deco.style.backgroundSize = "cover";
+
+
+
+ 
+
+        document.body.appendChild(deco);
+
+        deco.style.left = event.clientX - 25+ "px";
+        deco.style.top = event.clientY - 25 + "px";
+
+
+
+    };        // field.addEventListener("mousemove", function(event) {
+        //     console.log(event)
+
+        // }); 
+            deco.addEventListener("click", makeDeco);
+
+
+    flower.addEventListener("click", function() {
+
+        image = "flower.png"
+    });
+
+    blob.addEventListener("click", function() {
+
+        image = "blob.png"
+    });
+
+    smiley.addEventListener("click", function() {
+
+        image = "smiley.png"
+    
+
+    });
+
+
+
+</script>
+</body>
+</html>

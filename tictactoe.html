@@ -3,56 +3,31 @@
   <head>
     <meta charset="UTF-8">
     <title>Tic Tac Toe</title>
-    <link rel="stylesheet" href="style.css">
 
     <style>
 
-.game {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+table {
+border-collapse: collapse;
+margin: 0 auto;
 }
 
-.board {
-  display: flex;
-  flex-wrap: wrap;
-  width: 300px;
-  height: 300px;
-  border: 3px solid black;
+td {
+width: 100px;
+height: 100px;
+text-align: center;
+vertical-align: middle;
+border: 1px solid black;
 }
 
-.cell {
-  box-sizing: border-box;
-  width: 100px;
-  height: 100px;
-  border: 1px solid black;
-  font-size: 72px;
-  text-align: center;
-  line-height: 100px;
-  cursor: pointer;
+.x {
+color: blue;
+font-size: 80px;
 }
 
-.cell:hover {
-  background-color: lightgray;
+.o {
+color: red;
+font-size: 80px;
 }
-
-.message {
-  margin-top: 20px;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.reset {
-  margin-top: 20px;
-  font-size: 24px;
-  background-color: white;
-  border: 2px solid black;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-
     </style>
 
 
@@ -60,75 +35,53 @@
 
   </head>
   <body>
-    <h1>Tic Tac Toe</h1>
-    <div class="game">
-      <div class="board">
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-      </div>
-      <div class="message"></div>
-      <button class="reset">Reset Game</button>
-    </div>
-    <script src="script.js"></script>
+   <div class="container">
+<table>
+
+<tr>
+<td id="1"></td>
+<td id="2"></td>
+<td id="3"></td>
+</tr>
+<tr>
+<td id="4"></td>
+<td id="5"></td>
+<td id="6"></td>
+</tr>
+<tr>
+<td id="7"></td>
+<td id="8"></td>
+<td id="9"></td>
+</tr>
+</table>
+</div>
+
 
 
 <script type="text/javascript">
-  const board = document.querySelector('.board');
-const cells = document.querySelectorAll('.cell');
-const message = document.querySelector('.message');
-const resetButton = document.querySelector('.reset');
+  let playerSymbol = "X";
 
-let currentPlayer = 'X';
-let isGameOver = false;
+  let gameEnded = false
 
-// Initialize the game board
-function init() {
-  board.addEventListener('click', handleClick);
-  resetButton.addEventListener('click', reset);
+  for (let i = 1; i <= 9; i++) {
+document.getElementById(i.toString()).addEventListener(
+"click", 
+function() {
+
+}
+);
 }
 
-// Handle cell click events
-function handleClick(e) {
-  if (isGameOver) return;
-  if (e.target.classList.contains('cell')) {
-    if (e.target.textContent === '') {
-      e.target.textContent = currentPlayer;
-      checkWinner();
-      currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
-    }
-  }
+if (this.innerHTML === "" && !gameEnded) {
+this.innerHTML = playerSymbol;
 }
 
-// Check if the game has been won
-function checkWinner() {
-  const winningPositions = [
-    [0, 1, 2],
-    [3, 4, 5],
-    [6, 7, 8],
-    [0, 3, 6],
-    [1, 4, 7],
-    [2, 5, 8],
-    [0, 4, 8],
-    [2, 4, 6]
-  ];
-
-  for (let i = 0; i < winningPositions.length; i++) {
-    const [a, b, c] = winningPositions[i];
-    if (cells[a].textContent === currentPlayer &&
-        cells[b].textContent === currentPlayer &&
-        cells[c].textContent === currentPlayer) {
-      isGameOver = true;
-      message.textContent = `Player ${currentPlayer} wins
+if (playerSymbol === "X")
+playerSymbol = "O"
+else
+playerSymbol = "X"
 
 
-  
 </script>
 
   </body>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css">
+
+
+		.luv{
+			width: 100px;
+			height: 100px;
+			background-image: url(heart.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			position:absolute;
+			transition: 1s;
+		}
+
+
+
+	</style>
+
+</head>
+<body>
+<center>
+</center>
+
+<script type="text/javascript">
+
+		function makeHeart (){
+			var heart = document.createElement("div")
+			document.body.appendChild(heart);
+			heart.classList.add('luv')
+
+			function move(){
+				heart.style.left = Math.random()*1200 + "px"
+				heart.style.top = Math.random()*700 + "px"
+
+			}
+
+			var timing = Math.round(Math.random()*2000)
+
+			setInterval(move,timing)
+
+		}
+
+
+
+		for(var i=0; i<50; i=i+1){
+			makeHeart()
+		}
+
+
+</script>
+
+
+</body>
+</html>

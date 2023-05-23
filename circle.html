@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+<style type="text/css">
+
+body{
+  margin:0;
+  padding:0;
+  background-color:white;
+}
+	
+#circle{
+	height: 100px;
+	width: 100px;
+	background-color: mediumvioletred ;
+	position: absolute;
+	border-radius:50%;
+	background-repeat: no-repeat;
+}
+
+
+</style>
+
+</head>
+<body>
+
+<div id ="circle"></div>
+
+	<!-- 
+		+ vibrating/moving to different positions
+			+ dots stay within a given radius regardless of whether they're interacting/bumping into other dots
+		+ changing color
+		+ event listener to mouse
+			+ when mouse moves change relative pos to eachother?
+
+
+
+	 -->
+
+	 <script type="text/javascript">
+	 	document.addEventListener("mousemove", function(event) {
+ 		circle.style.left = event.clientX + "px";
+ 	 	circle.style.top = event.clientY + "px";
+
+
+});
+
+
+
+
+
+
+
+
+	 </script>
+
+</body>
+</html>
